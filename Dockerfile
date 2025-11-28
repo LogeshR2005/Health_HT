@@ -5,6 +5,6 @@ RUN mvn clean package -DSkipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/HT-0.0.1-SNAPSHOT.jar HT.jar
 
-EXPOSE 10000
+EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","HT.jar"]
